@@ -23,16 +23,51 @@ function saldoTotal(){
     return total;
 }
 
-function preencherGrafico(){
+function preencherDadosGrafico(){
+    let mes = mesAtual;
+    let ano = anoAtual;
     for(let i = saldoMes.length; i > 0; i--){
         let valorBarra = document.getElementById('valorBarra' + i);
         let caixaBarra = document.getElementById('caixaBarra' + i);
 
         valorBarra.innerText = 'R$ ' + saldoMes[saldoMes.length - i].toFixed(2);
+
+        if(mes <= 0){
+            mes = 12;
+            ano--;
+        }
+        caixaBarra.innerText = meses[mes - 1] + '/' + ano;
+        mes--;
     }
     
 }
 
+function atualizarBarrasGrafico(){
+    const alturaMinima = 25;
+    const alturaMaxima = 80 - 25;
+
+    let maiorValor = 0;
+    let menorValor = 999999999999;
+    for(let i = 0; i < saldoMes.length; i++){
+        if(saldoMes[i] > maiorValor){
+            maiorValor = saldoMes[i];
+        }
+        if(saldoMes[i] < menorValor){
+            menorValor = saldoMes[i];
+        }
+    }
+
+    for(let i = saldoMes.length; i > 0; i--){
+        let caixaBarra = document.getElementById('caixaBarra' + i);
+
+        let altura = (alturaMaxima * saldoMes[saldoMes.length - i] / maiorValor) + 25;
+        
+        caixaBarra.style.height = altura + 'px';
+    }
+
+}
+
 document.getElementsByClassName('saldoGrande')[0].innerText = 'R$ ' + saldoTotal();
 document.getElementsByClassName('saldoPequeno')[0].innerText = 'R$ ' + saldoTotal();
-preencherGrafico();
+preencherDadosGrafico();
+atualizarBarrasGrafico();
