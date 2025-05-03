@@ -14,11 +14,18 @@ body{
 /*Classes Comuns*/
 .flex{
     display: flex;
+    align-items: center;
 }
 .linkLaranjaNegrito{
     text-decoration: none;
     font-weight: 700;
     color: #c36510;
+    font-size: 13px;
+    margin: 0;
+}
+.textoDireita{
+    text-align: right;
+    margin-left: auto;
 }
 
 /*Estilos de Elementos*/
@@ -28,10 +35,12 @@ header{
     margin: 25px 10px;
 }
 img{
-    height: 25px;
+    height: 20px;
+    margin-left: 3px;
 }
 h2{
     margin: 0;
+    font-size: 20px;
 }
 p{
     margin: 0;
@@ -39,12 +48,34 @@ p{
 
 /*Resumo de Investimentos*/
 #resumoPrincipal{
-    border: solid 2px white;
+    border: solid 2px #2c2c2c;
     border-radius: 10px;
+    padding: 15px;
 }
 .divResumo{
-    margin: 7px 15px;
+    margin: 5px 0;
     display: flex;
     align-items: center;
+}
+.saldoGrande{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.saldoPequeno{
+    font-size: 15px;
+    color: #8c8d90;
+}
+.bandeira{
+    height: 13px;
+    margin-right: 5px;
+}
+.textoMenorCinza{
+    font-size: 13px;
+    color: #8c8d90;
+}
+.linhaPontilhada{
+    border-top: 1px dashed #2c2c2c;
+    width: 100%;
+    margin: 20px 0;
 }
 
