@@ -1,28 +1,50 @@
+@font-face {
+    font-family: Inter;
+    src: url(fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+
 body{
     background-color: #1d1d1f;
     margin: 0;
     padding: 10px;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/*Classes Comuns*/
 .flex{
     display: flex;
 }
-
-header{
-    display: flex;
+.linkLaranjaNegrito{
+    text-decoration: none;
+    font-weight: 700;
+    color: #c36510;
 }
 
+/*Estilos de Elementos*/
+header{
+    display: flex;
+    align-items: center;
+    margin: 25px 10px;
+}
+img{
+    height: 25px;
+}
+h2{
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+
+/*Resumo de Investimentos*/
 #resumoPrincipal{
     border: solid 2px white;
     border-radius: 10px;
 }
 .divResumo{
+    margin: 7px 15px;
     display: flex;
+    align-items: center;
 }
 
-.linkLaranjaNegrito{
-    text-decoration: none;
-    font-weight: 700;
-    color: orange;
-}
