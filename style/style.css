@@ -122,7 +122,25 @@ p{
     height: 25px; /*Altura inícial (será modificada pelo JS)*/
 }
 
+/*Dados mensais*/
+#dadosMes{
+    border: solid 2px #2c2c2c;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+#dadosMes h3{
+    margin: 0;
+}
+#dadosMes p{
+    font-size: 14px;
+    color: #8c8d90;
+}
+#dadosMes div{
+    margin-bottom: 7px;
+}
 
+/*Locais investidos*/
 #locaisInvestidos{
     margin-top: 40px;
 }
