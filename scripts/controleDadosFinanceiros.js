@@ -8,6 +8,7 @@ const mesAtual = 5;
 const anoAtual = '2025';
 
 const meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+const mesesCompletos = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
 
 // Movimentação de dinheiro em cada mês (não é o saldo final, apenas o que aumentou ou diminuiu)
 let dinheiroMovimentadoMeses = [0, 0, 0, 0, 0, 0]; // Ordem decrescente (0 = mês atual, 1 = mês anterior ...)
@@ -91,9 +92,9 @@ atualizarDadosMensais(0);
 
 function obterMes(mes){
     if(mes >= 0){
-        return meses[mes];
+        return mesesCompletos[mes];
     }else{
-        return meses[12 - (mes * -1)];
+        return mesesCompletos[12 - (mes * -1)];
     }
 }
 
