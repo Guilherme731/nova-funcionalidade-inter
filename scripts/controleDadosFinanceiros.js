@@ -1,5 +1,7 @@
 // Movimentação de dinheiro em cada mês (não é o saldo final, apenas o que aumentou ou diminuiu)
 const dinheiroMovimentadoMeses = [802.23, 361.14, -330.78, 272.43, -66.32, 300]; // Ordem decrescente (0 = mês atual, 1 = mês anterior ...)
+
+
 const mesAtual = 5;
 const anoAtual = '2025';
 const meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
@@ -71,3 +73,9 @@ document.getElementsByClassName('saldoGrande')[0].innerText = 'R$ ' + saldoTotal
 document.getElementsByClassName('saldoPequeno')[0].innerText = 'R$ ' + saldoTotal();
 preencherDadosGrafico();
 atualizarBarrasGrafico();
+atualizarDadosMensais(0);
+
+
+function atualizarDadosMensais(id){
+    
+}
